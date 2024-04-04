@@ -1,0 +1,89 @@
+@import url("~/.cache/wal/colors.css");
+
+window {
+    margin: 0px;
+    border: 5px solid #738F9A;
+    background-color: #9e9a99;
+    font-family: "SFUI Nerd Font Text SemiBold";
+    font-size: 10px;
+	border-radius: 15px;
+  }
+  
+  @keyframes gradient_f {
+      0% {
+          background-position: 0% 200%;
+      }
+      50% {
+          background-position: 200% 0%;
+      }
+      100% {
+          background-position: 400% 200%;
+      }
+  }
+  
+  #input {
+    all: unset;
+    min-height: 36px;
+    padding: 4px 10px;
+    margin: 4px;
+    border: none;
+    color: #cad3f5;
+    font-weight: bold;
+    background-color: #C2B3AE;
+    outline: none;
+    border-radius: 15px;
+    margin: 10px;
+    margin-bottom: 2px;
+  }
+  
+  #inner-box {
+    margin: 4px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+  }
+  
+  #outer-box {
+    margin: 0px;
+    padding: 3px;
+    border: none;
+	border-radius: 15px;
+    border: 5px solid #738F9A;
+  }
+  
+  #scroll {
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+  
+  #text:selected {
+    color: #1e2030;
+    margin: 0px 0px;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  #entry {
+    margin: -10px -10px;
+	padding-left: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+  }
+  
+  #entry:selected {
+    margin: 0px 0px;
+	padding-left: 10px;
+    border: none;
+    border-radius: 15px;
+    /* background: linear-gradient(70deg, #7dc4e4 0%, #f5bde6 100%); */
+    background: radial-gradient(circle, #738F9A 0%, #738F9A 12%, #939D9D 19%, #738F9A 20%, #738F9A 24%, #738F9A 36%, #738F9A 37%, #738F9B 48%, #637F9B 52%, #738F9A 52%, rgba(160,175,248,1) 59%, rgba(139, 213, 202,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(73, 77, 100,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); 
+    background-size: 400% 400%;
+    animation: gradient_f linear infinite;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 10.0s;
+  }
+  
