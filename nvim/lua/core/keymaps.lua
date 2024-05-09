@@ -21,6 +21,8 @@ vim.g.mapleader = "<Space>"
 vim.keymap.set('n', '<C-s>', ':wa<CR>')
 vim.keymap.set('n', '<C-q>', ':q<CR>')
 vim.keymap.set('n', '<C-m>', ':wqa<CR>')
+vim.keymap.set('n', 'm', '$')
+vim.keymap.set('n', 'f', '0')
 
 vim.keymap.set('n', '<C-d>', ':HopWord<CR>')
 

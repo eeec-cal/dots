@@ -153,12 +153,14 @@ return require('packer').startup(function(use)
 				dashboard.button( "h", "󰋖                   Command Help               ", ":Telescope help_tags<CR>"),
 				dashboard.button( "r", "󰑓                   Recent Files               ", ":Telescope oldfiles<CR>"),
 			}
+
 		end,
 		use {
 			'Saverio976/music.nvim',
 			run = ':MusicInstall',
 			requires = { 'voldikss/vim-floaterm' }
-		}
+		},
+		-- use 'qtkittyy/superspoon.nvim'
 	}
 	if packer_bootstrap then
 		require('packer').sync()

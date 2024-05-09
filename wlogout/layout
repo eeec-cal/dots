@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock -i ~/wallpapers/steam.png",
+    "action" : "swaylock -i ~/wallpapers/fleurs.jpg",
     "text" : "Lock",
     "keybind" : "l"
 }

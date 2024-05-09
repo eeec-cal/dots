@@ -1,11 +1,11 @@
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": ["sway/workspaces"],
     "modules-left": ["network", "pulseaudio"],
     "modules-right": ["battery", "clock"],
     // Modules configuration
@@ -132,7 +132,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "   {essid}",
+        "format-wifi": "  {essid}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -167,8 +167,17 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+		"exec": "waybar_media_display",
+		"on-click": "playerctl play-pause",
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+	"custom/waybar-media": {
+        "return-type": "json",
+        "exec": "waybar-media.py status",
+        "on-click": "waybar-media.py playpause",
+        "on-scroll-up": "waybar-media.py previous",
+        "on-scroll-down": "waybar-media.py next",
+        "escape": true
+	},
 }
 

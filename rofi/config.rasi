@@ -1,0 +1,11 @@
+configuration {
+	display-drun: " ";
+	display-combi: "Eat my balls";
+	show-icons: true;
+	drun-display-format: "{name} {icon}";
+	modes: "window,run,drun";
+	font: "JetBrainsMono Nerd Font 12";
+	window-format:              "{w} · {c} · {t}";
+}
+
+@theme "/home/tor/.config/rofi/themes/toto.rasi"

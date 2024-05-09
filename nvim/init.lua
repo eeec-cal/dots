@@ -30,6 +30,8 @@ cmp.setup({
 	}),
 })
 require("luasnip").setup()
+-- require('superspoon').setup()
+
 
 local logo = [[
           __    _____                          .___                  .___      
@@ -220,6 +222,18 @@ lspconfig.zls.setup({
 	on_attach = on_attach
 })
 
+if not configs.serve_d then
+	configs.serve_d = {
+		default_config = {
+			cmd = { "serve_d" },
+			filetypes = { 'd' },
+		},
+	}
+end
+lspconfig.serve_d.setup({
+	on_attach = on_attach
+})
+
 if not configs.jdtls then
 	configs.jdtls = {
 		default_config = {
@@ -284,7 +298,7 @@ require("telescope").load_extension("glyph")
 
 -- require("telescope-playlist").setup()
 
-vim.cmd([[:colorscheme tokyonight-night]])
+vim.cmd([[:colorscheme pywal]])
 
 -- Variables
 
@@ -297,5 +311,24 @@ vim.o.timeoutlen = 300
 
 require("which-key").setup({})
 
+require("neo-tree").setup({
+	filesystem = {
+		filtered_items = {
+			visible = true,
+			hide_dotfiles = false,
+		},
+	window = {
+		position = "right",
+		width = 50,
+	}
 
 
+
+	}
+})
+
+-- neovide
+
+vim.o.guifont = "JetBrainsMono Nerd Font:h8"
+vim.g.neovide_transparency = 0.9
+vim.g.neovide_scroll_animation_length = 0

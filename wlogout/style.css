@@ -1,26 +1,29 @@
+
 * {
 	background-image: none;
-	box-shadow: none;
+	box-shadow: #FFFFFF;
 }
 
 window {
-	background-color: rgba(12, 12, 12, 0.3);
+	background-color: rgba(12, 12, 12, 0.7);
 }
 
 button {
-    border-radius: 15px;
+    border-radius: 5px;
+	border-width: 0px;
     border-color: black;
 	text-decoration-color: #FFFFFF;
-    color: #FFFFFF;
-	background-color: #1E1E1E;
-	border: solid 3px #FFFFFF;
+    color: #B4E1FF;
+	background-color: #453750;
+	border: solid 0px #FFFFFF;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
+	margin: 2px;
 }
 
 button:focus, button:active, button:hover {
-	background-color: #24273a;
+	background-color: #73648A;
 	outline-style: none;
 }
 

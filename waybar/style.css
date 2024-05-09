@@ -1,30 +1,35 @@
 @import url("/home/tor/.cache/wal/colors-waybar.css");
 
 * {
-    border-radius: 0;
-    font-family: 'SFUI Nerd Font Text SemiBold';
+    border-radius: 5px;
+	/* border-width: 2px; */
+	/* border-style: solid; */
+	/* border-color: @background; */
+    font-family: 'JetBrainsMono Nerd Font';
     font-size: 12pt;
     min-height: 0;
 	color: @color4;
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0);
+	background: alpha(@color3, 0);
 }
 tooltip {
 	background: #FFFFFF;
-	border-radius: 15px;
+	border-radius: 5px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #a4b9ef;
 	}
 
 #workspaces {
-    background: @background;
+    background: @color3;
     margin-left: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: 0px 0px 15px 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 #workspaces button {
@@ -32,8 +37,8 @@ tooltip {
 	margin-right: 2px;
     min-width: 0;
     color: @foreground;
-	background-color: @background;
-	border-radius: 15px;
+	background-color: @color3;
+	border-radius: 5px;
 }
 
 #workspaces button.focused {
@@ -45,34 +50,38 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @foreground;
-    border-color: #332e41;
+    background: @color1;
+    border-color: @color3;
 	color: @foreground;
-	border-radius: 15px;
+	border-radius: 5px;
 }
 
-#clock, #battery, #pulseaudio, #workspaces, #mpd, #window {
+#clock, #battery, #pulseaudio, #mpd, #window {
 	padding: 2px 10px;
-    background: alpha(@background, 1.0);
-    margin-top: 0px;
+    background: alpha(@color1, 1.0);
+    margin-top: 5px;
+    padding-top: 5px;
     margin-bottom: 5px;
 	padding-bottom: 5px;
 }
 
 #pulseaudio {
-    border-radius: 0px 0px 15px 0px;
+    border-radius: 0px 5px 5px 0px;
 	padding-right: 10px;
+	margin-right: 5px;
 }
 
 #network {
     padding-left: 2px;
     padding-bottom: 5px;
+    padding-top: 5px;
     padding-right: 0px;
-    background: alpha(@background, 1.0);
-    border-radius: 0px 0px 0px 0px;
-    margin-top: 0px;
+    background: alpha(@color1, 1.0);
+    border-radius: 5px 0px 0px 5px;
+    margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 0px;
+    margin-left: 5px;
 }
 
 #custom-vpn {
@@ -84,20 +93,12 @@ tooltip {
 
 #clock {
     padding-right: 5px;
-    margin-right: 0px;
-    border-radius: 0px 0px 0px 0px;
+    margin-right: 5px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 #battery {
-	border-radius: 0px 0px 0px 15px;
+	border-radius: 5px 0px 0px 5px;
 	padding-left: 10px;
 }
 
-#custom-spotify {
-    background: #332E41;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 15px;
-}
